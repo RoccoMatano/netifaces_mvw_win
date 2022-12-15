@@ -711,7 +711,7 @@ add_to_family (PyObject *result, int family, PyObject *obj)
       return FALSE;
     }
 
-    PyList_SET_ITEM (list, 0, obj);
+    PyList_SetItem(list, 0, obj);
     PyDict_SetItem (result, py_family, list);
     Py_DECREF (list);
   } else {
