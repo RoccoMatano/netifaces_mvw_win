@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netifaces"
+description = "Portable network interface information."
+authors = [{name = "Alastair Houghton", email = "alastair@alastairs-place.net"}]
+requires-python = ">=3.8"
+license = {text = "MIT License"}
+classifiers = [
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Topic :: System :: Networking",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
+    ]
+dynamic = ["version", "readme"]
+
+[project.urls]
+homepage = "https://github.com/al45tair/netifaces"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "setup.__version__"}
+readme = {file = ["README.rst"], content-type = "text/x-rst"}
